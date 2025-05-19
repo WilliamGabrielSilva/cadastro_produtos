@@ -1,5 +1,4 @@
 body{
-    
     height: 100vh;
 }
 
@@ -19,6 +18,8 @@ body{
     border-radius: 10px;
     background-color: #fff;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: autos;
 }
 
 #simbolo{
