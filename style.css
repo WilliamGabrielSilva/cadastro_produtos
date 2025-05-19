@@ -10,8 +10,8 @@ body{
 }
 
 .upload-box{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: 2px dashed #888;
     display: flex;
     justify-content: center;
