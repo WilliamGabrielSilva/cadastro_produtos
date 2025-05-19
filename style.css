@@ -1,7 +1,5 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height: 100vh;
 }
 
@@ -14,7 +12,8 @@ body{
     height: 200px;
     border: 2px dashed #888;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     position: relative;
     border-radius: 10px;
