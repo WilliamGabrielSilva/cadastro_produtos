@@ -63,3 +63,15 @@ body{
     border-radius: 5px;
     margin: 10px;
 }
+
+#categoria{
+    display: block;
+}
+
+#descricao{
+    display: block;
+    width: 300px;
+    height: 70px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
