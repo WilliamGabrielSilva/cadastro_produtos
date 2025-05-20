@@ -44,6 +44,10 @@ body{
     object-fit: cover;
 }
 
+.infPrincipal{
+    display: flex;
+}
+
 
 #nomeProduto{
     width: 200px;
