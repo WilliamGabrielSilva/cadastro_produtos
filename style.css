@@ -80,7 +80,7 @@ body{
 #descricao{
     display: block;
     width: 295px;
-    height: 140px;
+    height: 110px;
     border: 1px solid #888;
     border-radius: 5px;
 }
@@ -92,7 +92,7 @@ body{
 
 #cancelar{
     width: 150px;
-    height: 30px;
+    height: 40px;
     border-radius: 5px 0 0 5px;
     border: 1px solid #888;
     margin-right: 2.5px;
@@ -100,7 +100,7 @@ body{
 
 #cadastrar{
     width: 150px;
-    height: 30px;
+    height: 40px;
     border-radius: 0 5px 5px 0;
     border: 1px solid #888;
     margin-left: 2.5px;
