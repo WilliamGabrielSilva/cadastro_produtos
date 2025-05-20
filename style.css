@@ -87,16 +87,19 @@ body{
 
 .botoes{
     display: flex;
+    margin-top: 20px;
 }
 
 #cancelar{
     width: 150px;
     height: 30px;
     border-radius: 5px 0 0 5px;
+    border: 1px solid #888;
 }
 
 #cadastrar{
     width: 150px;
     height: 30px;
     border-radius: 0 5px 5px 0;
+    border: 1px solid #888;
 }
