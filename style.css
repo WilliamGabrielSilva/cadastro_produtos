@@ -95,6 +95,7 @@ body{
     height: 30px;
     border-radius: 5px 0 0 5px;
     border: 1px solid #888;
+    margin-right: 5px;
 }
 
 #cadastrar{
@@ -102,4 +103,5 @@ body{
     height: 30px;
     border-radius: 0 5px 5px 0;
     border: 1px solid #888;
+    margin-left: 5px;
 }
