@@ -54,6 +54,8 @@ body{
     height: 40px;
     border-radius: 5px;
     border: 1px solid #888;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 #preco{
