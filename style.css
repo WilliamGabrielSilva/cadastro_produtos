@@ -107,3 +107,7 @@ body{
     border: 1px solid #888;
     margin-left: 2.5px;
 }
+
+#cancelar:hover, #cadastrar:hover{
+    background-color: #888;
+}
