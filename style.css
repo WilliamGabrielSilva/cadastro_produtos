@@ -44,9 +44,6 @@ body{
     object-fit: cover;
 }
 
-.informacoesProduto{
-    display: flex;
-}
 
 #nomeProduto{
     width: 200px;
