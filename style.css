@@ -68,13 +68,13 @@ body{
 #categoria{
     display: block;
     margin-bottom: 10px;
-    width: 295px;
+    width: 294px;
     height: 30px;
 }
 
 #descricao{
     display: block;
-    width: 297px;
+    width: 296px;
     height: 70px;
     border: 1px solid #888;
     border-radius: 5px;
