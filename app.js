@@ -12,9 +12,9 @@ async function carregarListaProdutos(){
 //Adiciona novo item a lista de produtos 
 window.adicionarItem = async function (){
     const user = await getUser()
-    console.log('Item:', input.value)
+    console.log('nome:', input.value)
 
     const {error} = await supabase.from('cadastro_produtos').insert({
-        item: input.value
+        nome: input.value
     })
 }
