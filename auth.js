@@ -1,6 +1,6 @@
 import { supabase } from "./supabaseClient";
 
-window.login = async function (){
+window.login() = async function (){
     const email = document.getElementById('email').value
     const senha = document.getElementById('senha').value
 
