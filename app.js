@@ -16,7 +16,7 @@ window.adicionarItem() = async function (){
     const user = await getUser()
     console.log('nome:', input.value)
 
-    const {error} = await supabase.from('cadastro_produtos').insert({
+    const {data, error} = await supabase.from('cadastro_produtos').insert({
         nome: input.value
     })
 }
