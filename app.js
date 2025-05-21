@@ -1,0 +1,20 @@
+import { supabase } from "./supabaseClient";
+
+//carrega a lista de produtos do supabase
+async function carregarListaProdutos(){
+    const{data, error} = await supabase.from('cadastro_produtos').select('*')
+    if(error){
+        console.error('Erro ao carregar produtos:', error)
+        return
+    }
+}
+
+//Adiciona novo item a lista de produtos 
+window.adicionarItem = async function (){
+    const user = await getUser()
+    console.log('Item:', input.value)
+
+    const {error} = await supabase.from('cadastro_produtos').insert({
+        item: input.value
+    })
+}
