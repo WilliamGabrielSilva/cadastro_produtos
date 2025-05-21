@@ -21,6 +21,29 @@ window.adicionarItem = async function (){
     })
 }
 
+//cria o usuario
+
+const {data, error} = await supabase.auth.signUp({
+    email: 'gabrielsilva21820@gmail.com',
+    senha: '1721WMg@'
+})
+
+if(error){
+    console.error('Erro ao criar usuário:', error)
+} else {
+    console.log('Usuário criado com sucesso:', data)
+}
+
+//verificar usuario
+
+async function getUser() {
+    const{data: {user}} = await supabase.auth.getUser()
+    if(!user) window.location.href = 'login.html'
+    return user
+}
+
+//acrescentar imagem ao produto
+
 const imageInput = document.getElementById("imageInput")
 const uploadBox = document.getElementById("uploadBox")
 
