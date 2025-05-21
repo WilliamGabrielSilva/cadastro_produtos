@@ -12,7 +12,7 @@ async function carregarListaProdutos(){
 const input = document.getElementById('nomeProduto')
 
 //Adiciona novo item a lista de produtos 
-window.adicionarItem() = async function (){
+window.adicionarItem = async function (){
     const user = await getUser()
     console.log('nome:', input.value)
 
