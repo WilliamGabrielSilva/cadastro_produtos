@@ -35,7 +35,7 @@ window.adicionarItem = async function () {
   console.log('nome:', input)
 
   const { error } = await supabase.from('cadastro_produtos').insert({
-    item: input
+    nome: input
     
   })
 
