@@ -10,6 +10,7 @@ async function getUser() {
 // Elementos do DOM
 const lista = document.getElementById('lista')
 const input = document.getElementById('nomeProduto')
+const preco = document.getElementById('preco')
 
 // Carrega a lista de compras do Supabase
 async function carregarLista() {
@@ -33,10 +34,11 @@ window.adicionarItem = async function () {
   const user = await getUser()
   console.log('Usuário:', user)
   console.log('nome:', input.value)
+  console.log('preço:', preco.value)
 
   const { error } = await supabase.from('cadastro_produtos').insert({
-    nome: input.value
-    
+    nome: input.value,
+    preco: preco.value
   })
 
   if (error) return alert('Erro ao adicionar: ' + error.message)
