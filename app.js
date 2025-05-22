@@ -85,11 +85,12 @@ document.addEventListener('keydown', function(){
 //Função para enviar imagem para o bucket
 
 const imagem = document.getElementById('imageInput')
+const file = imagem.src
 
-async function adicionarImagem(imagem) {
+async function adicionarImagem(file) {
   const {data, error} = await supabase.storage
     .from('foto-produtos')
-    .upload(`fotos/${imagem.name}`, imagem, {
+    .upload(`fotos/${file.name}`, file, {
       cacheControl: '3600',
       upsert: false
     })
