@@ -110,9 +110,11 @@ const nomeUnico = `${Date.now()}_${file.name}`
 await 
 supabase.storage.from('foto-produtos').upload(`fotos/${nomeUnico}`, file)
 
-const urlPublica = supabase.storage
+const {publicURL} = supabase.storage
   .from('foto-produtos')
-  .getPublicUrl(`fotos/${nomeUnico}`).publicURL
+  .getPublicUrl(`fotos/${nomeUnico}`)
+
+  console.log('URL pública gerada:', publicURL)
 
 //Salvar URL na tabela
 
