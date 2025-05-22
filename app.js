@@ -32,7 +32,7 @@ async function carregarLista() {
 window.adicionarItem = async function () {
   const user = await getUser()
   console.log('Usuário:', user)
-  console.log('Item:', input.value)
+  console.log('nome:', input.value)
 
   const { error } = await supabase.from('cadastro_produtos').insert({
     item: input.value,
