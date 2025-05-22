@@ -7,6 +7,13 @@ async function getUser() {
   return user
 }
 
+//Pega o id do usuario
+const {
+  data: {user},error
+} = await supabase.auth.getUser()
+
+const usuarioId = user.id
+
 // Elementos do DOM
 const lista = document.getElementById('lista')
 const input = document.getElementById('nomeProduto')
@@ -74,3 +81,48 @@ document.addEventListener('keydown', function(){
       adicionarItem()
   }
 })
+
+//Função para enviar imagem para o bucket
+
+async function adicionarImagem(file) {
+  const {data, error} = await supabase.storage
+    .from('foto-produtos')
+    .upload(`fotos/${file.name}`, file, {
+      cacheControl: '3600',
+      upsert: false
+    })
+
+    if(error){
+      console.error('Erro ao fazer upload:', error.message)
+      return null
+    } else {
+      console.log('Upload feito com sucesso:', data)
+      return data
+    }
+}
+
+//função para gerar a URL da imagem 
+
+const nomeUnico = `${Date.now()}_${file.name}`
+await 
+supabase.storage.from('foto-produtos').upload(`fotos/${nomeUnico}`, file)
+
+const urlPublica= supabase.storage
+  .from('foto-produto')
+  .getPublicUrl(`fotos/${nomeUnico}`).dataPublicUrl
+
+//Salvar URL na tabela
+
+async function salvarUrlNaTabela(usuarioId, urlPublica){
+  const{data, error} = await supabase
+  .from('cadastro-produtos')
+  .update({imagem_url: urlPublica})
+
+  .eq('id', usuarioId)
+
+  if(error){
+    console.error('Erro ao salvar URL na tabela:', error.message)
+  } else {
+    console.log('URL salva com sucesso na tabela:', data)
+  }
+}
