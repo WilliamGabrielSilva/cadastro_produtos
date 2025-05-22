@@ -89,10 +89,7 @@ async function adicionarImagem(file) {
     .from('foto-produtos')
     .upload(`fotos/${file.name}`, file, {
       cacheControl: '3600',
-      upsert: false,
-      metadata: {owner: (await supabase.auth.getUser()).data.user.id
-
-      }
+      upsert: false
     })
 
     if(error){
