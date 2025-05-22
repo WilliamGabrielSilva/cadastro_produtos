@@ -50,7 +50,8 @@ window.adicionarItem = async function () {
 
   const { error } = await supabase.from('cadastro_produtos').insert({
     nome: input.value,
-    preco: preco.value
+    preco: preco.value,
+    imagem_url: urlPublica
   })
 
   if (error) return alert('Erro ao adicionar: ' + error.message)
@@ -131,6 +132,8 @@ async function salvarUrlNaTabela(usuarioId, urlPublica){
     console.log('URL salva com sucesso na tabela:', data)
   }
 }
+
+await salvarUrlNaTabela(idDo)
 
 const addImg = document.getElementById('cadastrar')
 addImg.addEventListener('click', async () => {
