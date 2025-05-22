@@ -126,3 +126,11 @@ async function salvarUrlNaTabela(usuarioId, urlPublica){
     console.log('URL salva com sucesso na tabela:', data)
   }
 }
+
+const addImg = document.getElementById('cadastrar')
+addImg.addEventListener('click', async () => {
+  const fileInput = document.getElementById('imageInput')
+
+  const file = fileInput.files[0]
+  const resultadoUpload = await adicionarImagem(file)
+})
