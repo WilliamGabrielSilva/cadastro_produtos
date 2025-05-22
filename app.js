@@ -107,7 +107,7 @@ const nomeUnico = `${Date.now()}_${file.name}`
 await 
 supabase.storage.from('foto-produtos').upload(`fotos/${nomeUnico}`, file)
 
-const urlPublica= supabase.storage
+const urlPublica = supabase.storage
   .from('foto-produto')
   .getPublicUrl(`fotos/${nomeUnico}`).dataPublicUrl
 
