@@ -111,8 +111,8 @@ await
 supabase.storage.from('foto-produtos').upload(`fotos/${nomeUnico}`, file)
 
 const urlPublica = supabase.storage
-  .from('foto-produto')
-  .getPublicUrl(`fotos/${nomeUnico}`).dataPublicUrl
+  .from('foto-produtos')
+  .getPublicUrl(`fotos/${nomeUnico}`).publicURL
 
 //Salvar URL na tabela
 
