@@ -64,7 +64,9 @@ window.adicionarItem = async function () {
 
   const { error } = await supabase.from('cadastro_produtos').insert({
     nome: input.value,
-    preco: preco.value
+    preco: preco.value,
+    categoria: categoria.value,
+    descricao: descricao.value
   })
 
   if (error) return alert('Erro ao adicionar: ' + error.message)
