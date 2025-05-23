@@ -120,32 +120,6 @@ async function adicionarImagem(file) {
     }
 }
 
-//função para gerar a URL da imagem 
-
-const nomeUnico = `${Date.now()}_${file.name}`
-await 
-supabase.storage.from('foto-produtos').upload(`fotos/${nomeUnico}`, file)
-
-const {publicURL} = supabase.storage
-  .from('foto-produtos')
-  .getPublicUrl(`fotos/${nomeUnico}`)
-
-//Salvar URL na tabela
-
-async function salvarUrlNaTabela(id, urlPublica){
-  const{data, error} = await supabase
-  .from('cadastro-produtos')
-  .update({imagem_url: publicURL})
-
-  .eq('id', id)
-
-  if(error){
-    console.error('Erro ao salvar URL na tabela:', error.message)
-  } else {
-    console.log('URL salva com sucesso na tabela:', data)
-  }
-}
-
 
 const addImg = document.getElementById('cadastrar')
 addImg.addEventListener('click', async () => {
