@@ -132,7 +132,7 @@ addImg.addEventListener('click', async () => {
 const fotoProdutos = 'foto-produtos'
 const filePath = `fotos/${file.name}`
 
-const {data, error} = supabase.storage
+const {data: urlData, error: urlError} = supabase.storage
   .from('foto-produtos')
   .getPublicUrl(filePath)
   if(error){
