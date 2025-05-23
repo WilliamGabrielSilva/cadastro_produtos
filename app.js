@@ -130,6 +130,19 @@ async function salvarUrlNaTabela(id, urlPublica){
   }
 }
 
+const { data: urlData } = supabase.storage
+    .from('foto-produtos')
+    .getPublicUrl(`fotos/${nomeUnico}`)
+
+  const urlPublica = urlData.publicUrl
+
+  const { data, error } = await supabase.from('cadastro_produtos').insert({
+    nome: nomeProduto,
+    preco: precoProduto,
+    imagem_url: urlPublica
+  })
+
+
 
 const addImg = document.getElementById('cadastrar')
 addImg.addEventListener('click', async () => {
