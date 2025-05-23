@@ -128,3 +128,15 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
+
+const fotoProdutos = 'foto-produtos'
+const filePath = `fotos/${file.name}`
+
+const {data, error } = supabase.storage
+  .from('foto-produtos')
+  .getPublicUrl(filePath)
+if(error){
+  console.error('Erro ao pegar URL pública:', error)
+} else {
+  console.log('URL pública:', data.publicURL)
+}
