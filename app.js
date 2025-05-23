@@ -118,12 +118,12 @@ const {publicURL} = supabase.storage
 
 //Salvar URL na tabela
 
-async function salvarUrlNaTabela(usuarioId, urlPublica){
+async function salvarUrlNaTabela(id, urlPublica){
   const{data, error} = await supabase
   .from('cadastro-produtos')
   .update({imagem_url: urlPublica})
 
-  .eq('id', usuarioId)
+  .eq('id', id)
 
   if(error){
     console.error('Erro ao salvar URL na tabela:', error.message)
