@@ -114,7 +114,11 @@ const {publicURL} = supabase.storage
   .from('foto-produtos')
   .getPublicUrl(`fotos/${nomeUnico}`)
 
-  console.log('URL pública gerada:', publicURL)
+const filePath = `fotos/${nomeUnico}`
+
+const {data, error} = supabase.storage
+  .from('foto-produtos')
+  .getPublicUrl(filePath)
 
 //Salvar URL na tabela
 
