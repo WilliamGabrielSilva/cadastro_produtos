@@ -136,9 +136,7 @@ const { data: urlData } = supabase.storage
 
   const urlPublica = urlData.publicUrl
 
-  const { data, error } = await supabase.from('cadastro_produtos').insert({
-    nome: nomeProduto,
-    preco: precoProduto,
+  const { data, error } = await supabase.from('cadastro_produtos').insert({ 
     imagem_url: urlPublica
   })
 
