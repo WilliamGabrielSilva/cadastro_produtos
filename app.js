@@ -18,6 +18,8 @@ const usuarioId = user.id
 const lista = document.getElementById('lista')
 const input = document.getElementById('nomeProduto')
 const preco = document.getElementById('preco')
+const categoria = document.getElementById('categoria')
+const descricao = document.getElementById('descricao')
 
 // Carrega a lista de compras do Supabase
 async function carregarLista() {
@@ -39,6 +41,16 @@ async function carregarLista() {
     li.innerHTML = `${preco.preco} <button onclick="removerItem('${preco.id}')" style="border: none; background-color: #fff; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>`
     lista.appendChild(li)
   })
+  data.forEach((categoria) => {
+    const li = document.createElement('li')
+    li.innerHTML = `${categoria.categoria} <button onclick="removerItem('${categoria.id}')" style="border: none; background-color: #fff; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>`
+    lista.appendChild(li)
+  })
+  data.forEach((descricao) => {
+    const li = document.createElement('li')
+    li.innerHTML = `${descricao.descricao} <button onclick="removerItem('${descricao.id}')" style="border: none; background-color: #fff; cursor:pointer;"><i class="fa-solid fa-trash"></i></button>`
+    lista.appendChild(li)
+  })
 }
 
 // Adiciona novo item à lista de compras
@@ -47,6 +59,8 @@ window.adicionarItem = async function () {
   console.log('Usuário:', user)
   console.log('nome:', input.value)
   console.log('preço:', preco.value)
+  console.log('categoria:', categoria.value)
+  console.log('descrição:', descricao.value)
 
   const { error } = await supabase.from('cadastro_produtos').insert({
     nome: input.value,
