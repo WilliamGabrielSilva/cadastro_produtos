@@ -154,3 +154,5 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
+
+console.log(publicURL)
