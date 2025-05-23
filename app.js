@@ -132,7 +132,7 @@ const {publicURL} = supabase.storage
 
 //Salvar URL na tabela
 
-async function salvarUrlNaTabela(id, publicURL){
+async function salvarUrlNaTabela(id, urlPublica){
   const{data, error} = await supabase
   .from('cadastro-produtos')
   .update({imagem_url: publicURL})
@@ -154,5 +154,3 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
-
-console.log(publicURL)
