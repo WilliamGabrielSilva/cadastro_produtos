@@ -133,7 +133,7 @@ async function salvarUrlNaTabela(usuarioId, urlPublica){
   }
 }
 
-await salvarUrlNaTabela(idDo)
+
 
 const addImg = document.getElementById('cadastrar')
 addImg.addEventListener('click', async () => {
