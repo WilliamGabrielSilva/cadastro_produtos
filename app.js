@@ -135,8 +135,8 @@ const filePath = `fotos/${file.name}`
 const {data, error} = supabase.storage
   .from('foto-produtos')
   .getPublicUrl(filePath)
-if(error){
-  console.error('Erro ao pegar URL pública:', error)
-} else {
-  console.log('URL pública:', data.publicURL)
-}
+  if(error){
+    console.error('Erro ao pegar URL pública:', error)
+  } else {
+    console.log('URL pública:', data.publicURL)
+  }
