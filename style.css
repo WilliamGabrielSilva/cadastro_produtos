@@ -118,6 +118,7 @@ body{
     position: absolute;
     background-color: #f2f2f2;
     transition: 0.5s ease;
+    transform: translateX(-180px);
 }
 
 h1{
@@ -190,4 +191,29 @@ ul li a i{
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~ .menu{
+    transform: translateX(0);
 }
