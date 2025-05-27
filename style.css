@@ -13,7 +13,7 @@ body{
     height: 100vh;
     width: 800px;
     cursor: pointer;
-     border: 2px dashed #888;
+    border: 2px dashed #888;
 }
 
 /*.upload-box{
@@ -32,6 +32,7 @@ body{
     color: #888;
     transition: opacity 0.3s;
     pointer-events: none;
+    text-align: center;
 }
 
 .upload-box img{
