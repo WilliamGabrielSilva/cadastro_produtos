@@ -42,8 +42,8 @@ body{
 
 
 #nomeProduto{
-    width: 200px;
-    height: 40px;
+    width: 600px;
+    height: 60px;
     border-radius: 5px;
     border: 1px solid #888;
     margin-right: 5px;
@@ -52,8 +52,8 @@ body{
 }
 
 #preco{
-    width: 105px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     border: 1px solid #888;
     border-radius: 5px;
     margin-top: 10px;
