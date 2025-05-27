@@ -151,6 +151,7 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
+
 const imageInput = document.getElementById("imageInput");
 const imagemCadastro = document.getElementById("imagemCadastro");
 
