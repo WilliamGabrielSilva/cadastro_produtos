@@ -8,12 +8,14 @@ body{
 }
 
 .imagemCadastro{
+    display: flex;
     text-align: center;
-    display: inline-block;
-    height: 100vh;
+    justify-content: center;
+    height: 100%;
     width: 800px;
     cursor: pointer;
     border: 2px dashed #888;
+    
 }
 
 /*.upload-box{
