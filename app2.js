@@ -153,7 +153,7 @@ addImg.addEventListener('click', async () => {
 })
 
 const imageInput = document.getElementById("imageInput")
-const uploadBox = document.getElementById("uploadBox")
+const simbolo = document.getElementById("simbolo")
 
 imageInput.addEventListener('change', function(){
     const file = this.files[0]
@@ -165,8 +165,8 @@ imageInput.addEventListener('change', function(){
             const img = document.createElement("img")
             img.src = reader.result
 
-            uploadBox.innerHTML = ""
-            uploadBox.appendChild(img)
+            simbolo.innerHTML = ""
+            simbolo.appendChild(img)
         }
         reader.readAsDataURL(file)
     }
