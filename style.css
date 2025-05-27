@@ -13,6 +13,7 @@ body{
     height: 100vh;
     width: 800px;
     cursor: pointer;
+     border: 2px dashed #888;
 }
 
 .upload-box{
