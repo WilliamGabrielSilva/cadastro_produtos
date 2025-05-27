@@ -27,6 +27,10 @@ body{
     margin-right: auto;
 }*/
 
+span{
+    margin: auto;
+}
+
 #simbolo{
     font-size: 60px;
     color: #888;
