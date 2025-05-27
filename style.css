@@ -33,6 +33,7 @@ body{
     transition: opacity 0.3s;
     pointer-events: none;
     text-align: center;
+    justify-content: center;
 }
 
 .upload-box img{
