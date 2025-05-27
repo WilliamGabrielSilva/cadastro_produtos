@@ -143,7 +143,7 @@ async function adicionarImagem(file) {
   }
 }
 
-
+/*
 const addImg = document.getElementById('cadastrar')
 addImg.addEventListener('click', async () => {
   const fileInput = document.getElementById('imageInput')
@@ -151,7 +151,7 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
-
+*/
 const imageInput = document.getElementById("imageInput")
 const simbolo = document.getElementById("")
 
