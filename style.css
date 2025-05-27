@@ -24,11 +24,6 @@ body{
     width: 200px;
     height: 200px;
     border: 2px dashed #888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
     border-radius: 10px;
     background-color: #fff;
     overflow: hidden;
