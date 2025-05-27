@@ -27,10 +27,6 @@ body{
     margin-right: auto;
 }*/
 
-.mais{
-    margin: auto;
-}
-
 #simbolo{
     font-size: 60px;
     color: #888;
@@ -38,6 +34,7 @@ body{
     pointer-events: none;
     text-align: center;
     justify-content: center;
+    margin: auto;
 }
 
 .upload-box img{
