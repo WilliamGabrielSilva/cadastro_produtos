@@ -6,7 +6,7 @@ body{
 .container{
     display: flex;
     flex-direction: row;
-    height: 755px;
+    height: 100%;
 }
 
 .imagemCadastro{
