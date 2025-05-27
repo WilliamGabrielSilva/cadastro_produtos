@@ -20,6 +20,11 @@ body{
     
 }
 
+img{
+    width: 800px;
+    height: 97%;
+}
+
 #simbolo{
     font-size: 60px;
     color: #888;
