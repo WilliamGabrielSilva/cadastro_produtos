@@ -151,23 +151,24 @@ addImg.addEventListener('click', async () => {
   const file = fileInput.files[0]
   const resultadoUpload = await adicionarImagem(file)
 })
+const imageInput = document.getElementById("imageInput");
+const imagemCadastro = document.getElementById("imagemCadastro");
 
-const imageInput = document.getElementById("imageInput")
-const uploadBox = document.getElementById("uploadBox")
+imageInput.addEventListener('change', function() {
+    const file = this.files[0];
 
-imageInput.addEventListener('change', function(){
-    const file = this.files[0]
+    if (file) {
+        const reader = new FileReader();
 
-    if(file){
-        const reader = new FileReader()
-        
-        reader.onload = function(){
-            const img = document.createElement("img")
-            img.src = reader.result
+        reader.onload = function() {
+            const img = document.createElement("img");
+            img.src = reader.result;
 
-            uploadBox.innerHTML = ""
-            uploadBox.appendChild(img)
+            // Limpar o conteúdo atual da área (onde estava o símbolo +)
+            imagemCadastro.innerHTML = "";
+            imagemCadastro.appendChild(img);  // Adiciona a imagem no lugar do símbolo "+"
         }
-        reader.readAsDataURL(file)
+
+        reader.readAsDataURL(file);
     }
-})
+});
