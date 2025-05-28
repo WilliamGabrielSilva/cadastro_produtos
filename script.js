@@ -11,8 +11,8 @@ imageInput.addEventListener('change', function(){
             const img = document.createElement("img")
             img.src = reader.result
 
-            uploadBox.innerHTML = ""
-            uploadBox.appendChild(img)
+            simbolo.innerHTML = ""
+            simbolo.appendChild(img)
         }
         reader.readAsDataURL(file)
     }
