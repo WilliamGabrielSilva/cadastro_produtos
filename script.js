@@ -1,5 +1,5 @@
 const imageInput = document.getElementById("imageInput")
-const uploadBox = document.getElementById("uploadBox")
+const simbolo = document.getElementById("simbolo")
 
 imageInput.addEventListener('change', function(){
     const file = this.files[0]
