@@ -13,7 +13,7 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 97%;
+    height: 90%;
     width: 700px;
     cursor: pointer;
     border: 2px dashed #888;
@@ -37,7 +37,7 @@ img{
 
 #simbolo img{
     width: 700px;
-    height: 97%;
+    height: 90%;
     object-fit: cover;
 }
 
