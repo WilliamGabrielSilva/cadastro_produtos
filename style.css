@@ -48,7 +48,7 @@ img{
 
 
 #nomeProduto{
-    width: 450px;
+    width: 400px;
     height: 60px;
     border-radius: 5px;
     border: 1px solid #888;
@@ -68,7 +68,7 @@ img{
 #categoria{
     display: block;
     margin-bottom: 10px;
-    width: 450px;
+    width: 550px;
     height: 60px;
     border-radius: 5px;
     border: 1px solid #888;
