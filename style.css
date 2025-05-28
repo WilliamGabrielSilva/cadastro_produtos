@@ -114,9 +114,10 @@ textarea{
 }
 
 #cadastrar, #cancelar{
-    margin-top: 100px;
+    margin-top: 300px;
     background-color: #AD2831;
     color: white;
+    font-weight: 800;
 }
 
 #cancelar:hover, #cadastrar:hover{
