@@ -8,6 +8,12 @@ body{
     height: 100%;
 }
 
+nav{
+    height: 30px;
+    background-color: #AD2831;
+    color: white;
+}
+
 .imagemCadastro{
     display: flex;
     text-align: center;
