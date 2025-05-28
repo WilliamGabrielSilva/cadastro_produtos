@@ -26,9 +26,6 @@ nav{
     width: 30px;
     height: 30px;
 }
-label{
-    height: 90%;
-}
 
 .imagemCadastro{
     display: flex;
