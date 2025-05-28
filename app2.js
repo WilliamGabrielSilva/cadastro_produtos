@@ -85,6 +85,39 @@ window.adicionarItem = async function () {
   
   carregarLista()
 }
+// Adiciona novo item à lista de compras
+window.adicionarItem = async function () {
+  const user = await getUser()
+  const fileInput = document.getElementById('imageInput')
+  const file = fileInput.files[0]
+  
+  let imagemUrl = null
+  if (file) {
+    const resultadoUpload = await adicionarImagem(file)
+    if (resultadoUpload) {
+      imagemUrl = resultadoUpload.publicUrl
+    }
+  }
+
+  const { error } = await supabase.from('cadastro_produtos').insert({
+    nome: input.value,
+    preco: preco.value,
+    categoria: categoria.value,
+    descricao: descricao.value,
+    imagem_url: imagemUrl
+  })
+
+  if (error) return alert('Erro ao adicionar: ' + error.message)
+
+  input.value = ''
+  preco.value = ''
+  categoria.value = ''
+  descricao.value = ''
+  fileInput.value = ''
+  uploadBox.innerHTML = '<span id="simbolo">+</span>'
+  
+  carregarLista()
+}
 
 // Remove item da lista pelo ID
 window.removerItem = async function (id) {
