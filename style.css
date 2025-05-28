@@ -118,6 +118,7 @@ textarea{
     background-color: #AD2831;
     color: white;
     font-weight: 800;
+    font-size: 25px;
 }
 
 #cancelar:hover, #cadastrar:hover{
