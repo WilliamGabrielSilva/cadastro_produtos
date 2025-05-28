@@ -21,6 +21,12 @@ nav{
     margin: 0;
 }
 
+#voltar{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
 .imagemCadastro{
     display: flex;
     text-align: center;
