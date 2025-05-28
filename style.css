@@ -13,7 +13,7 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 97%;
+    height: 90%;
     width: 800px;
     cursor: pointer;
     border: 2px dashed #888;
