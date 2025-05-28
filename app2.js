@@ -153,7 +153,7 @@ addImg.addEventListener('click', async () => {
 })
 */
 const imageInput = document.getElementById("imageInput")
-const simbolo = document.getElementById("")
+const simbolo = document.getElementById("simbolo")
 
 imageInput.addEventListener('change', function(){
     const file = this.files[0]
