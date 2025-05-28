@@ -113,6 +113,10 @@ textarea{
     margin-right: 5px;
 }
 
+#cadastrar, #cancelar{
+    bottom: 0;
+}
+
 #cancelar:hover, #cadastrar:hover{
     background-color: #888;
 }
